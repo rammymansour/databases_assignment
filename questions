@@ -1,0 +1,48 @@
+# databases_assignment
+1. Var hittar man log-filerna för databaserna? (MySQL / MariaDB, och MongoDB)
+
+	var/log/mysql/
+	var/log/mongodb/
+
+
+2. Vad är skillnaden mellan en SQL databas som MySQL / MariaDB och en NoSQL databas som MongoDB?
+	 
+	MySQL / MariaDB
+	-Använder structured query language SQL
+	-Data lagras I tabeller, en tabell motsvarar en relation
+	- Har fördefinierat schema
+	
+	-Enkelt att få support 
+	 
+	NoSQL /  MongoDB
+	-Använder inte structured query language SQL 
+	-Data lagras I documents och collections istället för relationer
+	-Har dynamiskt schema
+	-Ett dokument har en liknande struktur som ett json dokument och lagras I mongo I format 	BSON
+	-Svårt att få support
+	
+3. Vad finns det för likheter mellan databaserna?
+	
+	De båda använder sig av primärnycklar för att unikt kunna identifiera lagrad data.
+	
+	
+
+
+4. Fundera, när vill man välja en SQL databas, och när vill man välja en NoSQL databas?
+
+	SQL har fördefinierat schema medan NoSql har dynamiskt schema, därför ska man först
+  ifrågesätta om datans typ och om det finns tydliga relationer mellan olika data. 
+	Kolla om det finns en tydlig struktur på datan redan från början eller om det är oklart. 
+	SQL har man använt länge och den kan man använda med flesta applikationer och tjänster,
+  därför är det viktigt att veta om databasen ska användas någonstans annars kan det uppstå 	problem om man väljer NoSQL databasen.
+	
+
+
+
+5. Om du ger en annan part tillgång till din databas, vad är då viktigt att tänka på?
+	
+	Att begränsa åtkomst är viktigt att tänka på. Man kan välja rättigheter som användaren skall 	ha. 
+  Exempel på rättigheterna: All privilieges, create, delete, insert, select,update.
+	Man kan även styra vilka datorer som användaren kan ansluta sig ifrån,
+  genom att skriva 	vilket nätverk eller vilkem ipnummer användaren får ansluta. 
+  Exempel om man skriver 	“localhost” då är det enbart den loakal datorn som får användas. 
