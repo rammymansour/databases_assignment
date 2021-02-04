@@ -1,0 +1,1 @@
+db.bank_accounts.deleteOne({"_id" : ObjectId("601182741a7d231d1d2a07a6")})
