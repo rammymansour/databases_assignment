@@ -1,1 +1,1 @@
-CREATE DATABASE bank_account charset=utf8;
+INSERT INTO bank_accounts (first_name, last_name, holding)  VALUES  ("Rammy", "Mansour", 324);
