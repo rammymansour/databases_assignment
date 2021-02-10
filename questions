@@ -17,14 +17,12 @@
 	-Använder inte structured query language SQL 
 	-Data lagras I documents och collections istället för relationer
 	-Har dynamiskt schema
-	-Ett dokument har en liknande struktur som ett json dokument och lagras I mongo I format 	BSON
+	-Ett dokument har en liknande struktur som ett json dokument och lagras I mongo I format BSON
 	-Svårt att få support
 	
 3. Vad finns det för likheter mellan databaserna?
 	
 	De båda använder sig av primärnycklar för att unikt kunna identifiera lagrad data.
-	
-	
 
 
 4. Fundera, när vill man välja en SQL databas, och när vill man välja en NoSQL databas?
@@ -41,8 +39,43 @@
 
 5. Om du ger en annan part tillgång till din databas, vad är då viktigt att tänka på?
 	
-	Att begränsa åtkomst är viktigt att tänka på. Man kan välja rättigheter som användaren skall 	ha. 
+	Att begränsa åtkomst är viktigt att tänka på. Man kan välja rättigheter som användaren skall ha. 
   	Exempel på rättigheterna: All privilieges, create, delete, insert, select,update.
 	Man kan även styra vilka datorer som användaren kan ansluta sig ifrån,
   	genom att skriva vilket nätverk eller vilkem ipnummer användaren får ansluta. 
-  	Exempel om man skriver 	“localhost” då är det enbart den loakal datorn som får användas. 
+  	Exempel om man skriver 	“localhost” då är det enbart den loakal datorn som får användas.
+	
+	
+	
+6. Vad för typ av information kan vara känsligt / problematiskt att spara in en databas när det kommer till tex GDPR?
+	
+	GDPR står för General Data Protection Regulation. Personnamn, personnummer, e-post eller 
+	bilder kan vara känsilga. Etniska ursprung, politiska åsikter, religiösa övertygelse, … 
+	kan också vara känsliga och problematiska att spara. 
+
+7. Nämn några SQL-databaser, samt några NoSQL-databaser.
+	
+	SQL
+		MariaDB, Microsoft SQL Server, Oracle, MySQL.
+	NoSQL
+		MongoDB. HBase, Redis, CouchDB, Riak.
+	
+	
+
+8. Om flera företag, organisationer eller personer använder samma databas, 
+varför är det då viktigt att sätta upp separata användare i databasen för dessa parter?
+
+	För att kuna bergränsa vad folk kan se och göra.
+	För säkerhet skull.
+
+9. Vilka delar i CRUD påverkar / gör ändringar i databasen, och vilka delar i CRUD gör inte det?
+	
+	Create, Update och Delete påverkar
+	Read påverkar inte
+	
+
+10. Hur ansluter man till någon annans databas från terminalen? (Visa både på MySQL och MongoDB)
+
+	mysql -u username -h ip-adress -p
+	
+	mongo -u username h ipadress -p 
